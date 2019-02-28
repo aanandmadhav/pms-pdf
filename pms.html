@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PMS PDF</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.map" charset="utf-8"></script>
+
+<style media="screen">
+
+body {font-family: 'Open Sans', sans-serif;}
+h3 {font-weight: 400;}
+table {border-collapse: collapse;}
+
+.column1 {
+float: left;
+width: 40%;
+padding: 10px 0px;
+border-right: 1px solid white;
+}
+.column2 {
+float: left;
+width: 59%;
+padding: 10px 0px;
+}
+
+.column3 {
+float: left;
+width: 40%;
+padding: 10px 0px;
+border-right: 1px solid black;
+}
+.column4 {
+float: left;
+width: 59%;
+padding: 10px 0px;
+}
+
+.column5 {
+float: left;
+width: 19%;
+padding: 10px 0px;
+}
+.column6 {
+float: left;
+width: 80%;
+padding: 10px 0px;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+.container {
+  width: 80%;
+  margin: 20px;
+  margin-bottom: 0px;
+  background: #fff;
+  padding: 20px;
+  overflow: hidden;
+  float: right;
+  padding-left: 80px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid;
+}
+
+.horizontal .progress-bar {
+  float: left;
+  height: 45px;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.horizontal .progress-track {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #ebebeb;
+}
+
+.horizontal .progress-fill {
+  position: relative;
+  background: #666;
+  height: 20px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato","Verdana",sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* .rounded .progress-track,
+.rounded .progress-fill {
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+} */
+
+/* Vertical */
+
+.vertical .progress-bar {
+  float: left;
+  height: 200px;
+  width: 40px;
+  margin-right: 60px;
+}
+.progress-bar1 {
+  float: left;
+  height: 200px;
+  width: 40px;
+}
+
+.vertical .progress-track {
+  position: relative;
+  width: 40px;
+  height: 100%;
+}
+
+.vertical .progress-fill {
+  position: relative;
+  background: #232A30;
+  height: 50%;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato","Verdana",sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+.dolo{
+  background:#B17F1C !important;
+}
+
+/* .rounded .progress-track,
+.rounded .progress-fill {
+  box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  border-radius: 3px;
+} */
+    </style>
+  </head>
+  <body>
+    <div style="width:96%; margin: auto;">
+    <div style="heigh: 40px;">
+    <div id="company-name" style="border: 1px solid #ab7f22; border-radius: 50px; padding:10px; max-width: 20%; float: left;">
+      <span style="text-align: center; font-size: 20px; font-weight: 300;">Comapny Name</span>
+    </div>
+    <div id="date" style="float: right; margin-top: 15px;">
+    <span style="font-size: 15px; color: grey;">(as of 31st Jan 2019)</span>
+    </div>
+  </div>
+  <p><br/><br/><br/></p>
+    <div id="investment-strategy" style="background:#242A2D; width: 100%; height: 40px; ">
+    <h3 align="center" style="color: white; padding-top: 6px;" > Investment Strategy</h3>
+  </div>
+    <div id="intro" style="padding: 10px;">
+      <span style="font-size: 18px; line-height: 22px;"><p align="justify;">Cake dragée carrot cake wafer lollipop. Cookie tootsie roll cheesecake caramels tiramisu ice cream marzipan cotton candy. Lemon drops chocolate cake marzipan macaroon apple pie macaroon cookie. Bear claw ice cream bonbon cupcake ice cream. Jujubes sweet ice cream jelly topping chocolate cake lollipop. Macaroon tart lollipop oat cake jujubes marshmallow pastry apple pie. Marzipan sweet jelly chocolate bar jujubes. Chupa chups liquorice cake marshmallow carrot cake. Cupcake topping cheesecake cotton candy chocolate cake. Apple pie danish jelly croissant. Jelly beans sweet roll dragée pudding jelly beans dessert tiramisu. Halvah cupcake jujubes chocolate bar brownie. Brownie cookie caramels donut tiramisu carrot cake soufflé gummi bears.  Jelly beans sweet roll dragée pudding jelly beans dessert tiramisu. Halvah cupcake jujubes chocolate bar brownie. Brownie cookie caramels donut tiramisu carrot cake soufflé gummi bears.</p></span>
+    </div>
+   <div class="row">
+     <div class="column1" >
+       <div id="investment-strategy" style="background:#242A2D; width: 100%; height: 40px; ">
+          <h3 align="center"  style="color: white; padding-top: 6px;" > Investment Strategy</h3>
+       </div>
+     </div>
+     <div class="column2">
+
+         <div id="investment-strategy" style="background:#242A2D; width: 100%; height: 40px; ">
+            <h3 align="center"  style="color: white; padding-top: 6px;" > Investment Strategy</h3>
+         </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="column3">
+      <div id="key-facts" paddin-left: 10px; padding-right: 10px;>
+        <table style="width: 100%;">
+         <tr>
+           <td style="color: grey;"> Fund Manager</td>
+           <td style="color: black;">Kamal Manocha</td>
+         </tr>
+         <tr>
+           <td style="color: grey;"> Date of Inception</td>
+           <td style="color: black;">date</td>
+         </tr>
+         <tr>
+           <td style="color: grey;">Benchmark</td>
+           <td style="color: black;">NIFTY</td>
+         </tr>
+         <tr>
+           <td style="color: grey;">AUM (cr)</td>
+           <td style="color: black;">10000</td>
+         </tr>
+       </table>
+     </div>
+
+     </div>
+     <div class="column4">
+      <div id="Perform" style="padding-left: 20px;">
+        <table style="width: 100%;">
+          <tr style="text-align: center;">
+            <td style="width: 20%; color: grey;"> In Percentage</td>
+            <td style="width: 10%; border-right: 1px solid black;">1M</td>
+            <td style="width: 10%; border-right: 1px solid black;">3M</td>
+            <td style="width: 10%; border-right: 1px solid black;">6M</td>
+            <td style="width: 10%; border-right: 1px solid black;">1Y</td>
+            <td style="width: 10%; border-right: 1px solid black;">3Y</td>
+            <td style="width: 10%; border-right: 1px solid black;">5Y</td>
+            <td style="width: 20%;">Inception</td>
+          </tr>
+          <tr style="text-align: center;">
+            <td style="width: 20%; color: grey;"> In Percentage</td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 20%;"></td>
+          </tr>
+          <tr style="text-align: center;">
+            <td style="width: 20%; color: grey;"> In Percentage</td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 10%; border-right: 1px solid black;"></td>
+            <td style="width: 20%;"></td>
+          </tr>
+        </table>
+        <table style="width: 100%; margin-top: 15px;">
+          <tr >
+            <td style="width: 30%; text-align: right; color: grey;">Return Metric :</td>
+            <td style="width: 70%; text-align: left; padding-left: 10px;">  Aggreygate Portfolio Performance</td>
+          </tr>
+        </table>
+      </div>
+     </div>
+   </div>
+
+   <!-- Vertical, rounded -->
+   <div class="row">
+     <div class="column5" >
+      <p>Graph</p>
+     </div>
+     <div class="column6" >
+       <div class="container vertical rounded">
+         <p style="margin-bottom: 30px;"><img src="brown.png" height="20px" width="20px" style="padding-right: 20px;">Value Strategy <img src="blue.png" width="20px" height="20px" style="padding-right: 20px; padding-left: 200px;"> NIFTY 50 </p>
+
+           <div class="progress-bar1">
+           <div class="progress-track">
+             <div class="progress-fill">
+               <span>55%</span>
+             </div>
+           </div>
+         </div>
+         <div class="progress-bar">
+           <div class="progress-track">
+             <div class="progress-fill dolo">
+               <span>60%</span>
+             </div>
+           </div>
+         </div>
+
+         <div class="progress-bar1">
+           <div class="progress-track">
+             <div class="progress-fill">
+               <span>25%</span>
+             </div>
+           </div>
+         </div>
+          <div class="progress-bar">
+           <div class="progress-track">
+             <div class="progress-fill dolo">
+               <span>36%</span>
+             </div>
+           </div>
+         </div>
+
+         <div class="progress-bar1">
+           <div class="progress-track">
+             <div class="progress-fill">
+               <span>95%</span>
+             </div>
+           </div>
+         </div>
+          <div class="progress-bar">
+           <div class="progress-track">
+             <div class="progress-fill dolo">
+               <span>20%</span>
+             </div>
+           </div>
+         </div>
+
+           <div class="progress-bar1">
+           <div class="progress-track">
+             <div class="progress-fill">
+               <span>75%</span>
+             </div>
+           </div>
+         </div>
+          <div class="progress-bar">
+           <div class="progress-track">
+             <div class="progress-fill dolo">
+               <span>90%</span>
+             </div>
+           </div>
+         </div>
+
+           <div class="progress-bar1">
+           <div class="progress-track">
+             <div class="progress-fill">
+               <span>65%</span>
+             </div>
+           </div>
+         </div>
+          <div class="progress-bar">
+           <div class="progress-track">
+             <div class="progress-fill dolo">
+               <span>60%</span>
+             </div>
+           </div>
+         </div>
+
+         <div class="progress-bar1">
+           <div class="progress-track">
+             <div class="progress-fill">
+               <span>85%</span>
+             </div>
+           </div>
+         </div>
+          <div class="progress-bar">
+           <div class="progress-track">
+             <div class="progress-fill dolo">
+               <span>90%</span>
+             </div>
+           </div>
+         </div>
+
+       </div>
+       <div style="width:91%; float: right; margin-bottom: 40px;">
+         <div style="width: 18.66%; height: 10px; border-right: 1px solid; border-left: 1px solid; float: left;">
+           <p align="center">3M</p>
+         </div>
+         <div style="width: 14.66%; height: 10px; border-right: 1px solid; float: left;">
+           <p align="center">6M</p>
+         </div>
+         <div style="width: 14.66%; height: 10px; border-right: 1px solid; float: left;">
+           <p align="center">1Y</p>
+         </div>
+         <div style="width: 14.66%; height: 10px; border-right: 1px solid; float: left;">
+           <p align="center">3Y</p>
+         </div>
+         <div style="width: 14.66%; height: 10px; border-right: 1px solid; float: left;">
+           <p align="center">5Y</p>
+         </div>
+         <div style="width: 19.96%; height: 10px; border-right: 1px solid; float: left;">
+           <p align="center">INCEPTION</p>
+         </div>
+       </div>
+     </div>
+     </div>
+    <div style="width:100%; text-align: center; padding-top: 10px;">
+         <table style="width: 100%; border: none;">
+           <tr style="background: #242A2D; color: white; height: 40px;">
+             <td style="width: 28.3%;"> Selector Allocation</td>
+             <td style="width: 5%;">% </td>
+             <td style="width: 28.3%;">Top 10 Holdings</td>
+             <td style="width: 5%;"> % </td>
+             <td style="width: 28.3%;"> Exit Load</td>
+             <td style="width: 5%;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;" border-bottom:  1px solid black;> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black;"> Exit Load</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;" border-bottom:  1px solid black;> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black;"> Exit Load</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;"> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black;"> Exit Load</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;"> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black; background: #242A2D; color: white;">Product Attributes</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;"> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black; "> Product Attributes</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black; background: #242A2D; color: white;"> Market Cap Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black; border-bottom:  1px solid black;"></td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black;"> Exit Load</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;"> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black;"> Exit Load</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;"> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black;"> Exit Load</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;"> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black; background: #242A2D; color: white;"> Portfolio Attributes</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+           <tr style=" color: black; height: 40px; border-bottom:  1px solid black;">
+             <td style="width: 28.3%; border-right: 1px solid black;"> Selector Allocation</td>
+             <td style="width: 5%; border-right: 1px solid black;">% </td>
+             <td style="width: 28.3%; border-right: 1px solid black;">Top 10 Holdings</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+             <td style="width: 28.3%; border-right: 1px solid black;"> Exit Load</td>
+             <td style="width: 5%; border-right: 1px solid black;"> % </td>
+           </tr>
+         </table>
+         <div id="investment-strategy" style="background:#242A2D; width: 100%; height: 40px; padding-left: 10px;">
+            <h3 align="left"  style="color: white; padding-top: 6px;" > Investment Strategy</h3>
+         </div>
+         <div style="padding-left: 10px; height: 50px;">
+           <p align="left">Qualification & Accolades</p>
+         </div>
+         <div style="padding-left: 10px;">
+           <p align="left">Qualification & Accolades</p>
+         </div>
+   </div>
+
+
+    <div id="investment-strategy" style="background:#242A2D; width: 104%; height: 60px; padding-left: 35px; margin-left: -3%;">
+      <h3 align="left"  style="color: white; padding-top: 17px;" > Investment Strategy</h3>
+    </div>
+
+
+    <script type="text/javascript">
+    $('.progress-fill span').each(function(){
+    var percent = $(this).html();
+    var pTop = 100 - ( percent.slice(0, percent.length - 1) ) + "%";
+    $(this).parent().css({
+      'height' : percent,
+      'top' : pTop
+      });
+     });
+    </script>
+
+  </body>
+</html>
